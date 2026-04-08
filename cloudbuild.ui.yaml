@@ -1,0 +1,11 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -f
+      - Dockerfile.ui
+      - -t
+      - gcr.io/$PROJECT_ID/umkm-agent-ui
+      - .
+images:
+  - gcr.io/$PROJECT_ID/umkm-agent-ui
